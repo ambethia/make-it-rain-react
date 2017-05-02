@@ -1,6 +1,6 @@
 @import 'utility';
 
-$base-text-size: 16px;
+$base-text-size: 24px;
 $base-font-family: sans-serif;
 
 html {
@@ -10,4 +10,55 @@ html {
 body {
   margin: 0;
   font: $base-text-size / 1 $base-font-family;
+  background-color: #2c90d0;
+}
+
+button {
+  position: fixed;
+  width: 100px;
+  left: calc(50% - 50px);
+  bottom: 100px;
+  padding: 5px;
+  border: 5px solid #0aad8e;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 0 #2cd0af;
+  background-color: #b0eee3;
+  box-shadow: 2px 2px 0 rgba(#000, 0.5);
+  transition: all 40ms linear;
+  font-size: 24px;
+
+  &:focus {
+    outline: 0;
+    border-color: #22ccac;
+  }
+
+  &:hover {
+    transform: translate(-2px, -2px);
+    cursor: pointer;
+    box-shadow: 4px 4px 0 rgba(#000, 0.5);
+  }
+
+  &:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0 0 1px rgba(#000, 0.5);
+  }
+}
+
+.drop {
+  position: absolute;
+  background: linear-gradient(32deg, #ebf1f6 0%, #abd3ee 50%, #89c3eb 51%, #d5ebfb 100%);
+  width: 8px;
+  height: 16px;
+  border-radius: 4px 32px 4px 16px;
+}
+
+h3 {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  color: white;
+  font-size: 12px;
+  margin: 1em;
 }
